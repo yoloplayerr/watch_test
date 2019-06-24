@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	
+	
+	<meta charset="UTF-8" />
+	<title>Часы намаза</title>
+</h:head>
+
+<h:body>
+
+	<div>
+		<ui:repeat var="nodes" value="#{clock.arrayNod}">
+			<div class="#{nodes.getTag('class')}" id="#{nodes.getTag('id')}" style="#{nodes.getTag('style')}">
+				<ui:repeat var="panels" value="#{nodes.arrayPanel}">
+					<div class="#{panels.getTag('class')}" id="#{panels.getTag('id')}"
+						style="#{panels.getTag('style')}">
+						<div class="#{panels.curDate.getTag('class')}"
+							id="#{panels.curDate.getTag('class')}" style="#{panels.curDate.getTag('class')}">
+							<div>#{panels.curDate.getText('curDate')}</div>
+						</div>
+					</div>
+				</ui:repeat>
+			</div>
+		</ui:repeat>
+	</div>
+
+
+</h:body>
+</html>
