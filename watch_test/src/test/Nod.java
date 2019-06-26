@@ -14,7 +14,7 @@ public class Nod extends MessTag{
 		arrayPanel.add(new Panel("ru"));
 		arrayPanel.add(new Panel("tat"));			
 	}
-	public ArrayList<Panel> getArrayPanel(){
+	public ArrayList<Panel> getArrayPanel(){		
 		return arrayPanel;
 	}
 	

@@ -8,6 +8,7 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean
 @SessionScoped
 public class Clock{
+	
 	public ArrayList<Nod> arrayNod=new ArrayList<>();
 	//Пока что один nod 
 	public Clock() {

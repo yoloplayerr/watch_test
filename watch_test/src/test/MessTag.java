@@ -1,20 +1,28 @@
 package test;
 
 import java.util.HashMap;
+            
 
-//Класс Описывающий все обьекты 
-//Тут мало методов,но я еще буду думать над тем из чего состоят,и какие методы имеют,чтобы дополнить этот класс
 public class MessTag {
 	/*
-	 * Обьект хранящий название тега в качестве ключа 
-	 * и название класса в качестве значения 
+	 * Переменная которая содержит все
 	 */
-	private HashMap<String,String> tags=new HashMap<>();
+	public HashMap<String,HashMap<String,String>> tag=new HashMap<>();
+	/*
+	 * Переменная которая содержит ключи и значения,
+	 * например ключ=currentDate,Значение=текущая дата(на определенном языке)
+	 */
+	public HashMap<String,String> tagsValue=new HashMap<>();
 	
-		public String getTag(String param) {
-				tags.put(param,this.getClass().getSimpleName());
-			return tags.get(param);	
+		public void setTags() {
+			tagsValue.put("class",this.getClass().getSimpleName());
+			tagsValue.put("id",this.getClass().getSimpleName());		
+			tagsValue.put("style",this.getClass().getSimpleName());		
+			tag.put(this.getClass().getSimpleName(),tagsValue);
 		}
-		
-	
+		//Функция возвращающая теговые значения
+		public String keyTag(String key,String secondKey) {
+			setTags();
+			return tag.get(key).get(secondKey);
+		}					
 }

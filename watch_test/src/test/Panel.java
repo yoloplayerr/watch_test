@@ -14,8 +14,7 @@ public class Panel extends MessTag{
 	//Я сразу передаю язык все обьектам(можно ли так?)
 	//Тут будут инициализироваться все нужные обьекты(намаз текущая дата и тд)
 	public Panel(String lang) {
-		curDate=new CurrentDate(lang);
-		
+		curDate=new CurrentDate(lang);		
 	}
 	public CurrentDate getCurDate() {
 		return curDate;
